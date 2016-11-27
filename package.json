@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "aframe": "^0.3.2",
-    "aframe-click-drag-component": "^3.0.0"
+    "aframe-click-drag-component": "^3.0.0",
+    "aframe-mouse-cursor-component": "^0.2.1"
   }
 }

@@ -5,59 +5,34 @@
     <title>Hello, World! - A-Frame</title>
     <meta name="description" content="Hello, World! - A-Frame">
     <script src="lib/aframe.min.js"></script>
-    <script src="components/a-ocean-plane.js"></script>
+    <script src="node_modules/aframe-mouse-cursor-component/dist/aframe-mouse-cursor-component.min.js"></script>
+    
+    
+    <script src="components/u-item-selector.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene id="scene">
       <a-assets>
-        <a-asset-item id="cliff-1-obj" src="/assets/nature-pack/Brown_Cliff_01.obj"></a-asset-item>
-        <a-asset-item id="cliff-1-mtl" src="/assets/nature-pack/Brown_Cliff_01.mtl"></a-asset-item>
-
         <a-asset-item id="waterfall-1-obj" src="/assets/nature-pack/Brown_Waterfall_01.obj"></a-asset-item>
         <a-asset-item id="waterfall-1-mtl" src="/assets/nature-pack/Brown_Waterfall_01.mtl"></a-asset-item>
-
-        <a-asset-item id="all-obj" src="/assets/tree1/all.obj"></a-asset-item>
-        <a-asset-item id="tree1-obj" src="/assets/tree1/tree1.obj"></a-asset-item>
-        <a-asset-item id="tree2-obj" src="/assets/tree1/tree2.obj"></a-asset-item>
-        <a-asset-item id="all-mtl" src="/assets/tree1/all.mtl"></a-asset-item>
-        <img id="water-normal" src="/assets/water/waternormals.jpg"></img>
-        <img id="water" src="/assets/water/water1.jpg"></img>
-        <img id="sky" src="/assets/sky/sky2.jpg"></img>
-        <img id="water-ground" src="/assets/ground/ground1.jpg"></img>
-        <img id="grass-ground" src="/assets/ground/ground7.jpg"></img>
-        <img id="grass-map" src="/assets/normal/grass1.jpg"></img>
+        <img id="sky" src="assets/sky/sky2.jpg"/>
       </a-assets>
-      <a-entity 
-        obj-model="obj: #waterfall-1-obj; mtl: #waterfall-1-mtl"
-        position="0 0 -4"
-        material="metalness: 0"></a-entity>
-
-      <a-sphere
-        position="0 -100 0"
-        rotation="90 0 0"
-        radius="100"
-        src="#grass-ground"
-        repeat="200 200"
-        metalness="0"></a-sphere>
-      <!--<a-ocean-plane 
-        material="normalMap: #water-normal; sphericalEnvMap: #sky;"
-        position="0 -2 0" ></a-ocean-plane>-->
-      <a-plane 
-        position="0 -2 0" 
-        rotation="-90 0 0" 
-        width="1000" 
-        height="1000" 
-        src="#water"
-        repeat="250 250"
-        opacity="0.8"></a-plane>
-      <a-plane 
-        position="0 -4 0" 
-        rotation="-90 0 0" 
-        width="1000" 
-        height="1000" 
-        src="#water-ground"
-        repeat="250 250"></a-plane>
       <a-sky src="#sky"></a-sky>
+      <a-camera mouse-cursor rotation="-90 0 0" position="0 5 0" look-controls-enabled="false"></a-camera>
     </a-scene>
+
+    <script>
+      var scene = document.getElementById('scene');
+      var size = 3;
+      var col = 0;
+      var row = 0;
+      for (row=0; row<size; row++) {
+        for (col=0; col<size; col++) {
+          var newClickable = document.createElement('u-elem-selector');
+          newClickable.setAttribute('position', row + ' 0 ' + col);
+          scene.appendChild(newClickable);
+        }
+      }
+    </script>
   </body>
 </html>
