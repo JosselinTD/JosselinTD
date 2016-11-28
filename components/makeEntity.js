@@ -42,6 +42,7 @@ function makeEntity(_datas, scene) {
   entity.setAttribute('scale', datas.scale);
   entity.setAttribute('obj-model', 'obj: ' + datas.obj + '; mtl: ' + datas.mtl);
   entity.setAttribute('rotable', {});
+  entity.setAttribute('deletable', {});
 
   scene.appendChild(entity);
 }

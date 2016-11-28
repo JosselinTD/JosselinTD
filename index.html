@@ -11,6 +11,7 @@
     <script src="components/makeEntity.js"></script>
     <script src="components/u-item-selector.js"></script>
     <script src="components/rotable.js"></script>
+    <script src="components/deletable.js"></script>
 
     <style>
       #selector {
@@ -33,7 +34,7 @@
         <img id="sky" src="assets/sky/sky2.jpg"/>
       </a-assets>
       <a-sky src="#sky"></a-sky>
-      <a-camera mouse-cursor rotation="-90 0 0" position="0 2 0" look-controls-enabled="true"></a-camera>
+      <a-camera mouse-cursor rotation="-45 0 0" position="1 2 5" look-controls-enabled="true"></a-camera>
     </a-scene>
 
     <ul id="selector"></ul>
@@ -45,12 +46,12 @@
       // Cleaner le code
 
       var scene = document.getElementById('scene');
-      var size = 11;
+      var size = 3;
       var col, row;
       for (row=0; row<size; row++) {
         for (col=0; col<size; col++) {
           var newClickable = document.createElement('u-elem-selector');
-          newClickable.setAttribute('position', row + ' -0.1 ' + col);
+          newClickable.setAttribute('position', row + ' 1 ' + col);
           scene.appendChild(newClickable);
         }
       }
@@ -66,16 +67,21 @@
           Object.keys(naturePackList['issues']).forEach(function(key2) {
             var issueSelectable = document.createElement('li');
             issueSelectable.innerHTML = key2;
-            issueSelectable.addEventListener('click', liClick);
+            selectableEvents(issueSelectable);
             issues.appendChild(issueSelectable);
           })
 
           newSelectable.appendChild(issues);
         } else {
-          newSelectable.addEventListener('click', liClick);
+          selectableEvents(newSelectable)
         }
         selector.appendChild(newSelectable);
       });
+
+      function selectableEvents(selectable) {
+        selectable.addEventListener('click', liClick);
+        
+      }
 
       function liClick() {
         var id = this.innerHTML;

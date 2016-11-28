@@ -2,23 +2,13 @@ var scale = 1/3;
 var naturePackList = {
 	issues: {
 		// No top
-		Brown_Cliff_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_01.mtl'},
 		// No top
-		Brown_Cliff_Bottom_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_Bottom_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Bottom_01.mtl'},
+		// Trou
+		// Trou
 		// No top
-		Brown_Cliff_Bottom_Green_Top_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_Bottom_Green_Top_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Bottom_Green_Top_01.mtl'},
 		// Trou
-		Brown_Cliff_End_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_End_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_End_01.mtl'},
-		// Trou
-		Brown_Cliff_End_Green_Top_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_End_Green_Top_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_End_Green_Top_01.mtl'},
 		// No top
-		Brown_Cliff_Green_Top_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_Green_Top_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Green_Top_01.mtl'},
 		// Trou
-		Brown_Cliff_Top_Corner_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_Top_Corner_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Top_Corner_01.mtl'},
-		// No top
-		Brown_Waterfall_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Waterfall_01.obj',mtl: '/assets/nature-pack/Brown_Waterfall_01.mtl'},
-		// Trou
-		Brown_Waterfall_Top_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Waterfall_Top_01.obj',mtl: '/assets/nature-pack/Brown_Waterfall_Top_01.mtl'},
 		// Trou
 		Campfire_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Campfire_01.obj',mtl: '/assets/nature-pack/Campfire_01.mtl'},
 		// No top
@@ -42,8 +32,6 @@ var naturePackList = {
 		// Trou
 		Grey_Waterfall_Top_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Grey_Waterfall_Top_01.obj',mtl: '/assets/nature-pack/Grey_Waterfall_Top_01.mtl'},
 		// Trou
-		Plate_River_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Plate_River_01.obj',mtl: '/assets/nature-pack/Plate_River_01.mtl'},
-		Plate_River_01_fixed:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Plate_River_01_fixed.obj',mtl: '/assets/nature-pack/Plate_River_01_fixed.mtl'},
 		// Trou
 		Plate_River_Corner_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Plate_River_Corner_01.obj',mtl: '/assets/nature-pack/Plate_River_Corner_01.mtl'},
 		// Trou
@@ -77,11 +65,20 @@ var naturePackList = {
 		Plant_1_01:{scale: scale,offset: '-0.1 0 0.1',obj: '/assets/nature-pack/Plant_1_01.obj',mtl: '/assets/nature-pack/Plant_1_01.mtl'},
 		Plant_2_01:{scale: scale,offset: '-0.1 0 0.1',obj: '/assets/nature-pack/Plant_2_01.obj',mtl: '/assets/nature-pack/Plant_2_01.mtl'}
 	},
+	Brown_Cliff_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Brown_Cliff_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_01.mtl'},
+	Brown_Cliff_Bottom_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Brown_Cliff_Bottom_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Bottom_01.mtl'},
+	Brown_Cliff_Bottom_Green_Top_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_Bottom_Green_Top_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Bottom_Green_Top_01.mtl'},
 	Brown_Cliff_Bottom_Corner_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_Bottom_Corner_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Bottom_Corner_01.mtl'},
 	Brown_Cliff_Bottom_Corner_Green_Top_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_Bottom_Corner_Green_Top_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Bottom_Corner_Green_Top_01.mtl'},
-	Brown_Cliff_Corner_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_Corner_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Corner_01.mtl'},
+	Brown_Cliff_Corner_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Brown_Cliff_Corner_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Corner_01.mtl'},
 	Brown_Cliff_Corner_Green_Top_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_Corner_Green_Top_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Corner_Green_Top_01.mtl'},
-	Brown_Cliff_Top_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Brown_Cliff_Top_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Top_01.mtl'},
+	Brown_Cliff_End_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Brown_Cliff_End_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_End_01.mtl'},
+	Brown_Cliff_End_Green_Top_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Brown_Cliff_End_Green_Top_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_End_Green_Top_01.mtl'},
+	Brown_Cliff_Green_Top_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Brown_Cliff_Green_Top_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Green_Top_01.mtl'},
+	Brown_Cliff_Top_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Brown_Cliff_Top_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Top_01.mtl'},
+	Brown_Cliff_Top_Corner_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Brown_Cliff_Top_Corner_01.obj',mtl: '/assets/nature-pack/Brown_Cliff_Top_Corner_01.mtl'},
+	Brown_Waterfall_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Brown_Waterfall_01.obj',mtl: '/assets/nature-pack/Brown_Waterfall_01.mtl'},
+	Brown_Waterfall_Top_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Brown_Waterfall_Top_01.obj',mtl: '/assets/nature-pack/Brown_Waterfall_Top_01.mtl'},
 	Fallen_Trunk_01:{scale: scale,offset: '-0.4 0 0.15',obj: '/assets/nature-pack/Fallen_Trunk_01.obj',mtl: '/assets/nature-pack/Fallen_Trunk_01.mtl'},
 	Flower_Red_01:{scale: scale,offset: '-0.1 0 0.1',obj: '/assets/nature-pack/Flower_Red_01.obj',mtl: '/assets/nature-pack/Flower_Red_01.mtl'},
 	Flower_Tall_Red_01:{scale: scale,offset: '-0.1 0 0.1',obj: '/assets/nature-pack/Flower_Tall_Red_01.obj',mtl: '/assets/nature-pack/Flower_Tall_Red_01.mtl'},
@@ -106,6 +103,7 @@ var naturePackList = {
 	Plant_3_01:{scale: scale,offset: '-0.1 0 0.1',obj: '/assets/nature-pack/Plant_3_01.obj',mtl: '/assets/nature-pack/Plant_3_01.mtl'},
 	Plate_Grass_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Plate_Grass_01.obj',mtl: '/assets/nature-pack/Plate_Grass_01.mtl'},
 	Plate_Grass_Dirt_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Plate_Grass_Dirt_01.obj',mtl: '/assets/nature-pack/Plate_Grass_Dirt_01.mtl'},
+	Plate_River_01:{scale: scale,offset: '0 0 0',obj: '/assets/nature-pack/Plate_River_01.obj',mtl: '/assets/nature-pack/Plate_River_01.mtl'},
 	Rock_6_01:{scale: scale,offset: '-0.1 0 0.1',obj: '/assets/nature-pack/Rock_6_01.obj',mtl: '/assets/nature-pack/Rock_6_01.mtl'},
 	Tent_01:{scale: scale,offset: '-0.5 0 0.5',obj: '/assets/nature-pack/Tent_01.obj',mtl: '/assets/nature-pack/Tent_01.mtl'},
 	Tree_01:{scale: scale,offset: '-0.2 0 0.2',obj: '/assets/nature-pack/Tree_01.obj',mtl: '/assets/nature-pack/Tree_01.mtl'},
