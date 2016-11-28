@@ -1,8 +1,10 @@
+var lastClickPosition;
+
 AFRAME.registerComponent('u-select', {
   init: function () {
     this.el.addEventListener('click', function (ev) {
-      var position = AFRAME.utils.extend({}, this.getAttribute('position'), {y:0});
-      makeEntity(AFRAME.utils.extend({}, naturePackList.Oak_Fall_01, {position:position}), scene);
+      lastClickPosition = AFRAME.utils.extend({}, this.getAttribute('position'), {y:0});
+      displaySelector();
     });
   }
 });

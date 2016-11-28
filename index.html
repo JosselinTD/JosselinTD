@@ -10,6 +10,21 @@
     <script src="assets/nature-pack/nature-pack-list.js"></script>
     <script src="components/makeEntity.js"></script>
     <script src="components/u-item-selector.js"></script>
+
+    <style>
+      #selector {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        height: 80vh;
+        overflow-y: scroll;
+      }
+
+      #selector.on {
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <a-scene id="scene">
@@ -17,20 +32,42 @@
         <img id="sky" src="assets/sky/sky2.jpg"/>
       </a-assets>
       <a-sky src="#sky"></a-sky>
-      <a-camera mouse-cursor rotation="-90 0 0" position="0 5 0" look-controls-enabled="true"></a-camera>
+      <a-camera mouse-cursor rotation="-90 0 0" position="0 2 0" look-controls-enabled="true"></a-camera>
     </a-scene>
+
+    <ul id="selector"></ul>
 
     <script>
       var scene = document.getElementById('scene');
-      var size = 2;
+      var size = 11;
       var col, row;
-      for (row=-1; row<size; row++) {
-        for (col=-1; col<size; col++) {
+      for (row=0; row<size; row++) {
+        for (col=0; col<size; col++) {
           var newClickable = document.createElement('u-elem-selector');
           newClickable.setAttribute('position', row + ' 0.1 ' + col);
           scene.appendChild(newClickable);
         }
       }
+
+      var keys = Object.keys(naturePackList);
+      var selector = document.getElementById('selector');
+      keys.forEach(function(key) {
+        var newSelectable = document.createElement('li');
+        newSelectable.innerHTML = key;
+        newSelectable.addEventListener('click', liClick);
+        selector.appendChild(newSelectable);
+      });
+
+      function liClick() {
+        var id = this.innerHTML;
+        makeEntity(AFRAME.utils.extend({}, naturePackList[id], {position:lastClickPosition}), scene);
+        selector.className = '';
+      }
+
+      function displaySelector() {
+        selector.className = 'on';
+      }
+
     </script>
   </body>
 </html>
