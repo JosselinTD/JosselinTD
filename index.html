@@ -10,6 +10,7 @@
     <script src="assets/nature-pack/nature-pack-list.js"></script>
     <script src="components/makeEntity.js"></script>
     <script src="components/u-item-selector.js"></script>
+    <script src="components/rotable.js"></script>
 
     <style>
       #selector {
@@ -38,13 +39,17 @@
     <ul id="selector"></ul>
 
     <script>
+      // TODO
+      // Set object center to center
+      // Fix normal issues
+      
       var scene = document.getElementById('scene');
       var size = 11;
       var col, row;
       for (row=0; row<size; row++) {
         for (col=0; col<size; col++) {
           var newClickable = document.createElement('u-elem-selector');
-          newClickable.setAttribute('position', row + ' 0.1 ' + col);
+          newClickable.setAttribute('position', row + ' -0.1 ' + col);
           scene.appendChild(newClickable);
         }
       }
@@ -54,19 +59,35 @@
       keys.forEach(function(key) {
         var newSelectable = document.createElement('li');
         newSelectable.innerHTML = key;
-        newSelectable.addEventListener('click', liClick);
+        if (key === 'issues') {
+          var issues = document.createElement('ul');
+
+          Object.keys(naturePackList['issues']).forEach(function(key2) {
+            var issueSelectable = document.createElement('li');
+            issueSelectable.innerHTML = key2;
+            issueSelectable.addEventListener('click', liClick);
+            issues.appendChild(issueSelectable);
+          })
+
+          newSelectable.appendChild(issues);
+        } else {
+          newSelectable.addEventListener('click', liClick);
+        }
         selector.appendChild(newSelectable);
       });
 
       function liClick() {
         var id = this.innerHTML;
-        makeEntity(AFRAME.utils.extend({}, naturePackList[id], {position:lastClickPosition}), scene);
+        var obj = naturePackList[id] || naturePackList.issues[id];
+        makeEntity(AFRAME.utils.extend({}, obj, {position:lastClickPosition}), scene);
         selector.className = '';
       }
 
       function displaySelector() {
         selector.className = 'on';
       }
+
+      // makeEntity(AFRAME.utils.extend({}, naturePackList.issues['Plate_River_01'], {position:'0 0 0'}), scene);
 
     </script>
   </body>
