@@ -17,15 +17,28 @@
     <style>
       #selector {
         position: fixed;
-        top: 0;
+        top: 20vh;
         left: 0;
         display: none;
         height: 80vh;
         overflow-y: scroll;
+        margin: 0;
+        margin-left: 10px;
+        padding: 0;
       }
 
       #selector.on {
         display: block;
+      }
+
+      #interface {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 20vh;
+        margin: 0;
+        margin-left: 10px;
+        padding: 0;
       }
     </style>
   </head>
@@ -39,11 +52,17 @@
     </a-scene>
 
     <ul id="selector"></ul>
+    <ul id="interface">
+      <h2>Interfaces</h2>
+      <li>Click on blue : add element</li>
+      <li>h-key : hide blue</li>
+      <li>Click on element : rotate</li>
+      <li>Ctrl+Click on element : delete</li>
+    </ul>
 
     <script>
       // TODO
-      // Set object center to center
-      // Fix normal issues
+      // Retravailler les modèles
       // Cleaner le code
 
       var scene = document.getElementById('scene');
@@ -52,7 +71,7 @@
       for (row=0; row<size; row++) {
         for (col=0; col<size; col++) {
           var newClickable = document.createElement('u-elem-selector');
-          newClickable.setAttribute('position', row + ' 1 ' + col);
+          newClickable.setAttribute('position', row + ' 0.2 ' + col);
           scene.appendChild(newClickable);
         }
       }
